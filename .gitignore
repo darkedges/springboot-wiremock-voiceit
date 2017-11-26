@@ -4,4 +4,4 @@ target/*
 .project
 .factorypath
 .springBeans
-src/main/resources/*
+src/main/resources/application.properties
