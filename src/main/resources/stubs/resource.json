@@ -1,0 +1,27 @@
+{
+	"request": {
+		"url": "/sivservice/api/users",
+		"method": "GET",
+		"headers": {
+			"UserId": {
+				"equalTo": "nirving"
+			},
+			"VsitPassword": {
+				"equalTo": "3f21a8490cef2bfb60a9702e9d2ddb7a805c9bd1a263557dfd51a7d0e9dfa93e"
+			},
+			"VsitDeveloperId": {
+				"equalTo": "14e0a5f2bcd7454aaaeade37dce3f709"
+			}
+		}
+	},
+	"response": {
+		"status": 200,
+		"body": "{\"name\":\"nirving\",\"status\":\"ok\"}",
+		"headers": {
+			"Content-Type": "application/json"
+		},
+		"transformers": [
+			"response-template"
+		]
+	}
+}
