@@ -1,0 +1,39 @@
+{
+	"priority": 1,
+	"request": {
+		"url": "/sivservice/api/authentications",
+		"method": "POST",
+		"headers": {
+			"UserId": {
+				"equalTo": "nirving"
+			},
+			"Content-Type": {
+				"equalTo": "audio/wav"
+			},
+			"VsitPassword": {
+				"equalTo": "3f21a8490cef2bfb60a9702e9d2ddb7a805c9bd1a263557dfd51a7d0e9dfa93e"
+			},
+			"VsitDeveloperId": {
+				"equalTo": "developerId"
+			}
+		}
+	},
+	"response": {
+		"status": 200,
+		"jsonBody": {
+			"Result": "Authentication successful. 89.0%",
+			"Confidence": "89.0",
+			"DetectedVoiceprintText": "Never forget tomorrow is a new day",
+			"DetectedTextConfidence": "97.567433",
+			"EnrollmentID": "449867",
+			"ResponseCode": "SUC",
+			"TimeTaken": "1.02s"
+		},
+		"headers": {
+			"Content-Type": "application/json"
+		},
+		"transformers": [
+			"response-template"
+		]
+	}
+}

@@ -19,9 +19,9 @@ import com.darkedges.voiceit.proxy.services.VoiceItService;
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(properties = "voiceit.baseUrl=http://localhost:6065", classes = { VoiceItConfiguration.class,
-		VoiceItRestBase.Config.class })
-@AutoConfigureWireMock(stubs = "classpath:/stubs/*.json", port = 6065)
+@SpringBootTest(properties = { "voiceit.baseUrl=http://localhost:6065", "voiceit.developerId=developerId" }, classes = {
+		VoiceItConfiguration.class, VoiceItRestBase.Config.class })
+@AutoConfigureWireMock(stubs = "classpath:/stubs/", port = 6065)
 public abstract class VoiceItRestBase {
 	@Autowired
 	VoiceItController voiceItController;

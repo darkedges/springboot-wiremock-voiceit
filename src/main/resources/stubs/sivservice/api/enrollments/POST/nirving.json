@@ -1,0 +1,38 @@
+{
+	"priority": 1,
+	"request": {
+		"url": "/sivservice/api/enrollments",
+		"method": "POST",
+		"headers": {
+			"UserId": {
+				"equalTo": "nirving"
+			},
+			"Content-Type": {
+				"equalTo": "audio/wav"
+			},
+			"VsitPassword": {
+				"equalTo": "3f21a8490cef2bfb60a9702e9d2ddb7a805c9bd1a263557dfd51a7d0e9dfa93e"
+			},
+			"VsitDeveloperId": {
+				"equalTo": "developerId"
+			}
+		}
+	},
+	"response": {
+		"status": 200,
+		"jsonBody": {
+			"Result": "Success",
+			"EnrollmentID": "1092",
+			"DetectedVoiceprintText": "Never forget tomorrow is a new day",
+			"DetectedTextConfidence": "75",
+			"ResponseCode": "SUC",
+			"TimeTaken": "1.02s"
+		},
+		"headers": {
+			"Content-Type": "application/json"
+		},
+		"transformers": [
+			"response-template"
+		]
+	}
+}

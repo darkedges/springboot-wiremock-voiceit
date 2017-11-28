@@ -73,7 +73,7 @@ public class VoiceItService {
 		headers.add("VsitPassword", getSHA256(password));
 		headers.add("VsitDeveloperId", developerId);
 		headers.add("Content-type", "audio/wav");
-		headers.add("ContentLanguage", "en-AU");
+		headers.add("ContentLanguage", "en-GB");
 		HttpEntity<byte[]> entity = new HttpEntity<byte[]>(file.getBytes(), headers);
 		return this.restTemplate.exchange(this.base + "/sivservice/api/enrollments", HttpMethod.POST, entity,
 				String.class);
@@ -97,7 +97,7 @@ public class VoiceItService {
 		headers.add("VsitDeveloperId", developerId);
 		headers.add("VsitwavURL", url.toString());
 		headers.add("Content-type", "audio/wav");
-		headers.add("ContentLanguage", "en-AU");
+		headers.add("ContentLanguage", "en-GB");
 		HttpEntity<String> entity = new HttpEntity<String>(headers);
 		return this.restTemplate.exchange(this.base + "/sivservice/api/enrollments/bywavurl", HttpMethod.POST, entity,
 				String.class);
@@ -110,7 +110,7 @@ public class VoiceItService {
 		headers.add("VsitPassword", getSHA256(password));
 		headers.add("VsitDeveloperId", developerId);
 		headers.add("Content-type", "audio/wav");
-		headers.add("ContentLanguage", "en-AU");
+		headers.add("ContentLanguage", "en-GB");
 		HttpEntity<byte[]> entity = new HttpEntity<byte[]>(file.getBytes(), headers);
 		return this.restTemplate.exchange(this.base + "/sivservice/api/authentications", HttpMethod.POST, entity,
 				String.class);
@@ -123,7 +123,7 @@ public class VoiceItService {
 		headers.add("VsitDeveloperId", developerId);
 		headers.add("VsitwavURL", url.toString());
 		headers.add("Content-type", "audio/wav");
-		headers.add("ContentLanguage", "en-AU");
+		headers.add("ContentLanguage", "en-GB");
 		HttpEntity<String> entity = new HttpEntity<String>(headers);
 		return this.restTemplate.exchange(this.base + "/sivservice/api/authentications/bywavurl", HttpMethod.POST,
 				entity, String.class);

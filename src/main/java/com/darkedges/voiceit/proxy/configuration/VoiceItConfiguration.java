@@ -7,6 +7,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.client.OkHttp3ClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
+import com.darkedges.voiceit.proxy.exceptions.ProxyResponseErrorHandler;
+
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import okhttp3.logging.HttpLoggingInterceptor.Level;
@@ -17,6 +19,7 @@ public class VoiceItConfiguration {
 	@Bean
 	public RestTemplate restTemplate(RestTemplateBuilder builder) {
 		RestTemplate restTemplate = builder.setConnectTimeout(60000).build();
+		restTemplate.setErrorHandler(new ProxyResponseErrorHandler());
 		restTemplate.setRequestFactory(okHttp3ClientHttpRequestFactory());
 		return restTemplate;
 	}

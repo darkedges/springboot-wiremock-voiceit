@@ -1,0 +1,33 @@
+{
+	"priority": 1,
+	"request": {
+		"url": "/sivservice/api/users",
+		"method": "GET",
+		"headers": {
+			"UserId": {
+				"equalTo": "nirving"
+			},
+			"VsitPassword": {
+				"equalTo": "3f21a8490cef2bfb60a9702e9d2ddb7a805c9bd1a263557dfd51a7d0e9dfa93e"
+			},
+			"VsitDeveloperId": {
+				"equalTo": "developerId"
+			}
+		}
+	},
+	"response": {
+		"status": 200,
+		"jsonBody": {
+			"Result": "Success",
+			"Exists": true,
+			"ResponseCode": "SUC",
+			"TimeTaken": "1.02s"
+		},
+		"headers": {
+			"Content-Type": "application/json"
+		},
+		"transformers": [
+			"response-template"
+		]
+	}
+}
